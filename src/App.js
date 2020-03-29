@@ -8,7 +8,9 @@ function App() {
 
   return (
     <main className='App'>
-      {result}
+      <header className="App-header">
+        <h1>Trelloyes!</h1>
+      </header>
       <List>{STORE}</List>
     </main>
   );
