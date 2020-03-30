@@ -5,18 +5,19 @@ import Card from './Card.js'
 class ListClass extends React.Component {
     
     render(){
-        let column = this.props.children.lists;
-        let listArray = column.reduce((cur,val) => {
-            return cur +=
+        let column = this.props.data.lists;
+        let listArray = column.map((val) => {
+            return (
                 <div>
                     <section className = "List">
                         <header className = "List-header">
                             <h2>{val.header}</h2>
                         </header>
                     </section>
-                    <Card>{{allCards:this.props.children.allCards,cardsList:val.cardIds}}</Card>            
+                    <Card data={{allCards:this.props.data.allCards,cardsList:val.cardIds}}/>
                 </div>    
-        },'')
+            )
+        })
         
         console.log(listArray)
         return(

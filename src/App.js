@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <h1>Trelloyes!</h1>
       </header>
-      <List>{STORE}</List>
+      <List data={STORE}/>
     </main>
   );
 }
